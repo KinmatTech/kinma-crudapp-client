@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import  'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap'
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
  
@@ -23,10 +25,11 @@ const AddUser = () => {
   };
  
   return (
-    <div className="columns mt-5">
-      <div className="column is-half">
+    <Container>
+      <Row>
+          <div className="column is-half">
         <form onSubmit={saveUser}>
-          <div className="field">
+          <Col md>
             <label className="label">Name</label>
             <div className="control">
               <input
@@ -36,8 +39,8 @@ const AddUser = () => {
                 onChange={(e) => setName(e.target.value)}
                 />
             </div>
-          </div>
-          <div className="field">
+            </Col>
+          <Col>
             <label className="label">Email</label>
             <div className="control">
               <input
@@ -48,8 +51,8 @@ const AddUser = () => {
                 placeholder="Enter Email:"
               />
             </div>
-          </div>
-          <div className="field">
+          </Col>
+          <Col md>
             <label className="label">Gender</label>
             <div className="control">
               <div className="select is-fullwidth">
@@ -62,17 +65,18 @@ const AddUser = () => {
                 </select>
               </div>
             </div>
-          </div>
-          <div className="field">
+             </Col>    
+          <Col>
             <div className="control">
               <button type="submit" className="button is-success">
                 Save
               </button>
             </div>
-          </div>
+          </Col>
         </form>
       </div>
-    </div>
+    </Row>
+    </Container>
   );
 };
  
