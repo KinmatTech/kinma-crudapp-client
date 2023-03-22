@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import  'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Row, Col } from 'react-bootstrap'
 import axios from "axios";
 import { Link } from "react-router-dom";
  
@@ -24,11 +26,13 @@ const UserList = () => {
   };
  
   return (
-    <div className="columns mt-5">
+    <Container>
+    <Row>
       <div className="column is-half">
         <Link to="add" className="button is-success">
           Add New
         </Link>
+        <Col md>
         <table className="table is-striped is-fullwidth mt-2">
           <thead>
             <tr>
@@ -64,8 +68,10 @@ const UserList = () => {
             ))}
           </tbody>
         </table>
+        </Col>
       </div>
-    </div>
+      </Row>
+    </Container>
   );
 };
  
