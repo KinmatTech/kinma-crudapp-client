@@ -33,7 +33,7 @@ const UserList = () => {
           Add New
         </Link>
         <Col md>
-        <table className="table is-striped is-fullwidth mt-2">
+        <table className="table is-striped is-fullwidth mt-2 table-responsive">
           <thead>
             <tr>
               <th>No</th>
